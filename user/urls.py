@@ -1,7 +1,7 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
-
+from user.views import sign_up
 
 
 urlpatterns = [
@@ -12,5 +12,5 @@ urlpatterns = [
              redirect_authenticated_user=True),
          name="login"),
     path('logout', auth_views.LogoutView.as_view(), name="logout"),
-    path('accounts/', include('django.contrib.auth.urls')),    
+    path('sign-up', sign_up, name="sign_up")
 ]

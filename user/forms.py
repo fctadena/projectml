@@ -8,5 +8,5 @@ class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=False)
     
     class Meta:
-        Model = User
+        model = User
         fields = ['username', 'email', 'password1', 'password2']
